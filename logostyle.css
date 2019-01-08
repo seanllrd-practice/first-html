@@ -1,0 +1,168 @@
+/* make the content of the box take up the whole box */
+div {
+    margin: 0; 
+    padding: 0;
+}
+
+/* Give the android its green background. 
+   Position it relative to it's location in the html file */
+div div {
+    background: #a4ca39;
+    position: relative;
+}
+
+/* Create the height and width for the android.
+   Give the top and bottom margins 100px of space, let the page decide what the right and left margins should be. */
+.android{
+    height: 404px; 
+    width: 334px;
+    margin: 100px auto;
+}
+
+/* Set dimensions for the head.
+   The border-radius gives the head a rounded shape.
+   border-radius: top-left top-right bottom-right bottom-left 
+   webkit and moz make the code work with other browsers. */
+.head {
+    width: 220px;
+    height: 100px;
+    top: 32px;
+
+    border-radius: 110px 110px 0 0;
+    -webkit-border-radius: 110px 110px 0 0;
+    -moz-border-radius: 110px 110px 0 0;
+}
+
+/* Make the eyes white and set their dimensions.
+   Position the eyes exactly where they are specified in code.
+   Set the top margin to get the eyes positioned right in the head.
+   Set the border-radius to give the eyes a rounded shape. */
+.l_eye, .r_eye {
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 42px;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+/* Position eyes */
+.l_eye {
+    left: 50px;
+}
+
+.r_eye {
+    right: 50px;
+}
+
+/* Follow the logic of the eyes for the antenna */
+.l_ant, .r_ant {
+    width: 6px;
+    height: 50px;
+    position: absolute;
+    top: -34px;
+
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+/* Position antennas and rotate into position */
+.l_ant {
+    left: 50px;
+
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -moz-transform: rotate(-30deg);
+}
+
+.r_ant {
+    right: 50px;
+
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+}
+
+/* Set body dimensions and round the bottom corners.
+   Set top margin to add space between head and body. */
+.body {
+    width: 220px;
+    height: 184px;
+    top: 40px;
+
+    border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
+    -moz-border-radius: 0 0 25px 25px;
+}
+
+/* The arms and legs all follow the same pattern.
+   The transition effects will cause the elements to appear in a specific way.
+   All will effect all properties of the element.
+   0.1s makes the transition take 0.1 seconds.
+   ease-in makes it start slow then gradually pick up speed.*/
+.l_arm, .r_arm, .l_leg, .r_leg {
+    width: 50px;
+    position: absolute;
+
+    transition: all 0.1s ease-in;
+    -webkit-transition: all 0.1s ease-in;
+}
+
+/* Create rounded arms that sit apart from the body */
+.l_arm, .r_arm {
+    height: 150px;
+
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+}
+
+/* Create legs that are connected to the body and rounded at the bottom */
+.l_leg, .r_leg {
+    height: 80px;
+    top: 182px;
+
+    border-radius: 0 0 25px 25px;
+    -webkit-border-radius: 0 0 25px 25px;
+    -moz-border-radius: 0 0 25px 25px;
+}
+
+/* Position arms and legs */
+.l_arm {
+    left: -58px;
+}
+
+.r_arm {
+    right: -58px;
+}
+
+.l_leg {
+    left: 45px;
+}
+
+.r_leg {
+    right: 45px;
+}
+
+/* Add mouse over effects for the head and arms */
+.head:hover {
+    transform: rotate(-5deg) translate(-4px, -8px);
+    -webkit-transform: rotate(-5deg) translate(-4px, -8px);
+    -moz-transform: rotate(-5deg) translate(-4px, -8px);
+}
+
+.l_arm:hover {
+    transform: rotate(15deg) translate(-14px, 0);
+    -webkit-transform: rotate(15deg) translate(-14px, 0);
+    -moz-trasnform: rotate(15deg) translate(-14px, 0);
+}
+
+.r_arm:hover {
+    transform: rotate(-30deg) translate(30px, 0);
+    -webkit-transform: rotate(-30deg) translate(30px, 0);
+    -moz-transform: rotate(-30deg) translate(30px, 0);
+}
